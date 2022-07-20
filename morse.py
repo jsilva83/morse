@@ -3,9 +3,15 @@ from morse_table import morse_table
 
 def convert_to_morse():
 
-    in_sentence = input('Enter the sentence you want to code (morse): \n')
-    out_morse_sentence = ''.join([morse_table[a_char]+'  ' for a_char in in_sentence])
-    print(out_morse_sentence)
+    while True:
+
+        in_sentence = input('Enter the sentence you want to code (morse): \n').upper()
+        out_morse_sentence = ''.join([morse_table[a_char]+'  ' for a_char in in_sentence])
+        print(out_morse_sentence)
+
+        if in_sentence == 'EXIT':
+
+            break
 
 
 # Run main component.
